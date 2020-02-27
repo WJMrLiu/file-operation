@@ -33,7 +33,12 @@
         >
           <el-table-column align="center" prop="merId" label="序号" />
           <el-table-column align="center" prop="merName" label=" 桶名" />
-          <el-table-column align="center" prop="macId" label=" APPID" show-overflow-tooltip />
+          <el-table-column
+            align="center"
+            prop="macId"
+            label=" appid"
+            show-overflow-tooltip
+          />
         </el-table>
       </div>
     </div>
@@ -47,44 +52,43 @@ export default {
       loading: false,
       tableDataList: [
         {
-          merId: '1',
-          merName: 'shapp.bucket.outer01',
-          macId:
-            '564654654564656465465456465646546545646564654654564656465465456465646546545646564654654564656465465456465646546545646'
+          merId: "1",
+          merName: "shapp.bucket.outer01",
+          macId: "shapp.test.backend"
         }
       ],
       getDetailsList: [
         {
-          merId: '选项1',
-          merName: '行内'
+          merId: "选项1",
+          merName: "行内"
         },
         {
-          merId: '选项2',
-          merName: '行外'
+          merId: "选项2",
+          merName: "行外"
         }
       ],
       getDetailsList2: [
         {
-          merId: '选项1',
-          merName: '桶根路径'
+          merId: "选项1",
+          merName: "桶根路径"
         }
       ],
       form: {
-        transDate: '',
-        getDetailsListValue: ''
+        transDate: "",
+        getDetailsListValue: ""
       },
       rules: {
-        transDate: [{ required: true, message: '请输入日期', trigger: 'blur' }]
+        transDate: [{ required: true, message: "请输入日期", trigger: "blur" }]
       }
-    }
+    };
   },
 
   methods: {
     onSubmit() {
-      this.getPageList()
+      this.getPageList();
     }
   }
-}
+};
 </script>
 
 <style>
