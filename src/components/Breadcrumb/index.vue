@@ -63,7 +63,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .app-breadcrumb.el-breadcrumb {
   display: inline-block;
   font-size: 14px;

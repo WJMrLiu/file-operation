@@ -60,7 +60,9 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/example/fileApply',
     name: 'Example',
-    meta: { title: '文件桶', icon: 'table' },
+    meta: {
+      title: '文件桶', icon: 'file'
+    },
     children: [
       {
         path: 'fileApply',
@@ -151,7 +153,7 @@ const createRouter = () => new Router({
 const router = createRouter()
 
 // Detail see: https://github.com/vuejs/vue-router/issues/1234#issuecomment-357941465
-export function resetRouter() {
+export function resetRouter () {
   const newRouter = createRouter()
   router.matcher = newRouter.matcher // reset router
 }
